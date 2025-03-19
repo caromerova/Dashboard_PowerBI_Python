@@ -1,0 +1,55 @@
+#titulo {
+    font-size: 24px;
+  }
+
+  div {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  body {
+    background-color: rgb(179, 97, 97); /* Color de respaldo si la imagen no carga */
+  }
+
+  @media (max-width: 600px) {
+    body {
+      background-image: url('/Imagenes/background.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  h1 {
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  h5 {
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: lightgray;
+    padding: 10px;
+  }
+
+  .item {
+    background-color: rgb(28, 121, 108);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  
+
+
+  
+  
