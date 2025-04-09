@@ -1,32 +1,10 @@
-//Scroll Suave: Para que la navegación entre secciones sea fluida.
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+//funcion para efecto de mi menu al hacer scroll
+const navbar = document.getElementById("mainNavbar");
 
-//Efectos de Fade In al hacer scroll
-const elements = document.querySelectorAll('.fade-in');
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-});
-
-elements.forEach(el => observer.observe(el));
-
-
-//Menú desplegable o hamburguesa
-document.querySelector('.menu-btn').addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.toggle('active');
-});
-
-//Modo oscuro
-document.querySelector('#dark-mode-toggle').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-});
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add("navbar-scrolled");
+    } else {
+      navbar.classList.remove("navbar-scrolled");
+    }
+  });
